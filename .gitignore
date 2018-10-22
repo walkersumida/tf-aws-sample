@@ -1,0 +1,11 @@
+.DS_Store
+
+terraform/terraform.tfvars
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/variables.tf
+terraform/.terraform/*
+
+ansible/wp/group_vars/all
+ansible/wp/ansible.cfg
+ansible/wp/playbook.retry

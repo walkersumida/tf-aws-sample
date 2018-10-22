@@ -1,0 +1,5 @@
+[defaults]
+remote_user = user
+remote_port = 22
+private_key_file = ~/.ssh/test
+host_key_checking = False

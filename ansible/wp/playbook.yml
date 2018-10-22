@@ -1,0 +1,13 @@
+---
+- name: Install WordPress, MySQL, Nginx, and PHP-FPM
+  hosts: role_wp
+  remote_user: "{{ ssh_user }}"
+  become: yes
+  become_method: sudo
+
+  roles:
+    - common
+    - mysql
+    - nginx
+    - php-fpm
+    - wordpress
