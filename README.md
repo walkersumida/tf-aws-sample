@@ -10,6 +10,20 @@ brew install terraform-inventory
 # Create S3 bucket for tfstate file
 Create `tf-sample-files` bucket.
 
+# Create access key
+
+# Add aws credentials
+```
+mkdir ~/.aws
+touch ~/.aws/config
+```
+
+```
+[profile tf-sample]
+aws_access_key_id = hogehoeg
+aws_secret_access_key = hogehoge
+```
+
 # init command
 
 ```
@@ -51,4 +65,7 @@ terraform state pull > .terraform/local.tfstate
 
 cd ansible/wp
 TF_STATE=../../terraform/.terraform/local.tfstate ansible-playbook --inventory-file=/usr/local/bin/terraform-inventory playbook.yml
+
+cd terraform
+terraform destroy
 ```
